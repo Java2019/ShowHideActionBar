@@ -1,11 +1,12 @@
 package com.samples.home.showhideactionbar;
 
-import android.app.ActionBar;
-import android.app.Activity;
+import android.support.v7.app.ActionBar;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class ShowHideActionBarActivity extends Activity implements View.OnClickListener {
+public class ShowHideActionBarActivity extends AppCompatActivity
+        implements View.OnClickListener {
 
     private ActionBar actionBar;
 
@@ -13,7 +14,8 @@ public class ShowHideActionBarActivity extends Activity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_hide_action_bar);
-        actionBar = getActionBar();
+        actionBar = getSupportActionBar();
+
     }
 
     @Override
